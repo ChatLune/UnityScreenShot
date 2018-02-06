@@ -70,10 +70,11 @@ public class ScreenShot : MonoBehaviour {
 		float inv_w = 1f / dst_w;
 		float inv_h = 1f / dst_h;
 
-		for (int y = 0; y < dst_h; ++y)
-			for (int x = 0; x < dst_w; ++x)
+		for (int y = 0; y < dst_h; ++y){
+			for (int x = 0; x < dst_w; ++x){
 				dst.SetPixel(x, y, src.GetPixelBilinear((float)x * inv_w, (float)y * inv_h));
-
+			}
+		}
 		return dst;
 	}
 
